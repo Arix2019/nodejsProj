@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        .formButtons{display: flex;}
+        .formButtons button{margin-right: 3px;}
+    </style>
+</head>
+<body>
+
+    <h2>Lista de Postagens:</h2>
+    <hr>
+    <a href="/admin/postagens/add"><button class="btn btn-info">Adicionar nova Postagem</button></a>
+
+    <!--Exibe os registros na página:-->
+    {{#each postagens}}
+        <div class="card mt-4 mb-3">
+            <div class="card-body">
+                <h3>{{titulo}}</h3>
+                <h5>{{slug}}</h5>
+                <br>
+                <p>Descrição: <small>{{descricao}}</small></p>
+                <h6><font color="#676b6f">{{conteudo}}</font></h6>
+                <br>
+                <h6><font color="coral">{{categoria.nome}}</font></h6>
+                <hr>
+                <small>{{newDate}}</small><br>
+                <a href="/admin/postagens/edit/{{id}}"><button class="btn btn-warning mt-2">Editar Postagem</button></a>
+               <form action="/admin/postagens/deletar/{{id}}" method="POST">
+                    <button type="submit" class="btn btn-danger mt-2">Deletar Postagem</button>
+              </form>
+
+            </div>
+            
+        </div>
+    {{else}}
+        <h4>Nenhuma postagem encontrada.</h4>
+    {{/each}}
+    
+</body>
+</html>

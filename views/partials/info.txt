@@ -1,0 +1,2 @@
+Sera usado sempre que o 'res.render()' for utilizado.
+Este diretório contem partes do template do projeto.

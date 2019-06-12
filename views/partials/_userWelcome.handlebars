@@ -1,0 +1,9 @@
+<!-- informa que o usuario esta logado -->
+
+{{#if user}}
+    <div class="usertag">
+        <h6>Olá: {{user.nome}} | <a href="/usuario/logout">Sair</a></h6>
+    </div>
+    
+{{else}}
+{{/if}}

@@ -1,0 +1,16 @@
+<h4 class="alert alert-info">Todas as Postagens:</h4>
+<div class="card mb-3">
+    <div class="card-body">
+        {{#each postagens}}
+            <input type="hidden" id="id" name="id" value="{{id}}">
+            <h5>{{titulo}}</h5>
+            <h6><font size="3" color="#676b6f">{{conteudo}}</font></h6>
+            <p>{{categoria.nome}}</p>
+            <p><small>{{data}}</small></p>
+        {{else}}
+            <p>Não foi possivel exibir a postagem.</p>
+        {{/each}}
+            <hr>
+            <a href="/" class="btn btn-primary">Voltar</a>
+    </div>
+</div>

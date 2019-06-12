@@ -1,0 +1,26 @@
+Configura��o do projeto:
+------------------------
+
+Diret�rios do projeto:
+> config
+  > auth.js
+> models
+> routes
+  > admin.js
+> views
+  > layouts
+     > main.handlebars
+--------------------------------
+
+pacotes instalados:
+-------------------------------------
+npm --yes init
+npm install --save express
+npm install --save body-parser
+npm install --save mongoose
+npm install --save express-handlebars
+npm install --save express-session
+npm install --save connect-flash
+npm install --save bcrypt
+npm install --save passport
+npm install --save passport-local

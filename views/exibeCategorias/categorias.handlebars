@@ -1,0 +1,11 @@
+<div class="alert alert-info"><h4>Todas as Categorias:</h4></div>
+<div class="card">
+    <div class="card-body">
+        
+        {{#each categorias}}
+           <a href="/categoriasBySlug/{{slug}}"><h6>{{nome}}</h6></a>
+        {{else}}
+            <p>Não foi possivel listar as categorias.</p>
+        {{/each}}
+    </div>
+</div>

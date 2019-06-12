@@ -1,0 +1,32 @@
+<style>
+
+</style>
+<div class="jumbotron">
+  <h1 class="display-3">Blog NodeJs</h1>
+  <p class="lead">Node.js é um interpretador, com código aberto, de código JavaScript de modo assíncrono
+    e orientado a eventos, focado em migrar a programação do Javascript do lado do cliente para os servidores,
+    criado assim aplicações de alta escalabilidade (como um servidor web[1]), capazes de manipular milhares de
+    conexões/requisições simultâneas em tempo real, numa única máquina física.[2] V8Jar RyanDahl Linux Foundation</p>
+  <hr class="my-1">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+
+<h3 class="alert alert-info">Posts recentes:</h3>
+{{#each postagens}}
+  <div class="card mb-3">
+    <div class="card-header">
+      Categoria: {{categoria.nome}}
+      <p><small>{{data}}</small></p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{titulo}}</h5>
+      <p class="card-text">{{descricao}}</p>
+      <a href="/leiamais/{{id}}" class="btn btn-primary">Leia Mais</a>
+    </div>
+  </div>
+{{else}}
+  <p>Nenhuma postagem recente.</p>
+{{/each}}

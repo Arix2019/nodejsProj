@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <style>
+        .card{margin-top: 10%;} 
+        .card-body{justify-content: center; display: flex;}
+        .form-signin{ width: 50%;}
+    </style>
+</head>
+<body class="text-center">
+    <div class="card">
+            <div class="alert alert-info"><h4>Entre com seu E-mail e Senha:</h4></div>
+        <div class="card-body">
+            <form class="form-signin" action="/usuario/login" method="POST">
+                <!--<h1 class="h3 mb-3 font-weight-normal">Entre com seu E-mail e Senha:</h1>-->
+                 <label for="email" class="sr-only">Endereço de E-Mail:</label>
+                <input type="email" name="email" class="form-control" placeholder="Endereço de email" required autofocus>
+                <label for="senha" class="sr-only">Senha:</label>
+                <input type="password" name="senha" class="form-control" placeholder="Senha" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+            </form> 
+        </div>
+    </div>
+</body>
+</html>
